@@ -1,0 +1,149 @@
+<html>
+<head>
+	<title>My Homepage</title>
+	<meta charset="utf-8">
+	<style>
+	@font-face {
+		font-family: Roboto;
+		src: url(fonts/Roboto-Regular.ttf);
+	}
+	body {
+		background-color: #F0F0F0;
+		font-family: Roboto;
+	}
+	#wrap
+	{
+		background: #e0e0e0;	
+		border: 2px solid #000000;
+		width: 80%;
+		margin: 0 auto;
+		padding: 25px;
+	}
+	.child
+	{
+		width: 200px;
+		height: 200px;
+		margin: 10px;
+		display: inline-block;
+		background: #e0e0e0;
+		border: 3px solid #000000;
+		vertical-align: bottom;
+	}
+	.box {
+		height: 450px;
+		width: 430px;
+		border: 3px solid #00B2D3;
+		background-color: #2F333E;
+		position: absolute;
+		top: 0;
+		bottom:0;
+		left:0;
+		right:0;
+		margin: auto;
+	}
+	input[type="text"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	input[type="time"],
+	input[type="url"],
+	input[type="password"],
+	input textarea,
+	input select
+	{
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		outline: none;
+		display: block;
+		width: 40%;
+		padding: 7px;
+		border: none;
+		border-bottom: 1px solid #CCCCCC;
+		background: transparent;
+		margin-bottom: 10px;
+		font: 15px Roboto;
+		height: 45px;
+	}
+	a:link {
+    text-decoration: none;
+    color: black;
+	}
+	a:visited {
+		text-decoration: none;
+		color: black;
+	}
+	a:hover {
+		text-decoration: none;
+		color: black;
+	}
+	a:active {
+		text-decoration: none;
+		color: black;
+	}
+	</style>
+</head>
+<body onload="getWelcome(); getQuote();">
+	<div id="wrap" align="center">
+		<h1 id="welcome"></h1>
+		<p id="quote"></p>
+		
+		<form method="get" action="https://www.google.com/search">
+		<input type="text" name="q" size="50" autocomplete="off" placeholder="Search" value=""></form>
+		<div class="child">
+			<h3>SOCIAL</h3>
+			<a href="https://facebook.com">Facebook</a><br>
+			<a href="https://google.com">Google</a><br>
+			<a href="https://twitter.com">Twitter</a><br>
+			<a href="https://linkedin.com/">LinkedIn</a><br>			
+		</div>
+		<div class="child">
+			<h3>E-MAIL</h3>
+			<a href="https://outlook.com/">Outlook</a><br>
+			<a href="https://mail.google.com/">Gmail</a><br>
+			<a href="https://mail.yahoo.com/">Yahoo! Mail</a><br>
+			<a href="https://protonmail.com/">ProtonMail</a><br>
+			<a href="https://tutanota.com/">TutaNota</a><br>
+		</div>
+		<div class="child">
+			<h3>ENTERTAINMENT</h3>
+			<a href="https://youtube.com">YouTube</a><br>
+			<a href="https://twitch.tv/directory/">Twitch</a><br>
+			<a href="https://netflix.com/br/">Netflix</a><br>
+		</div>
+		<div class="child">
+			<h3>MISC</h3>
+			<a href="https://translate.google.com/">Translate</a><br>
+			<a href="https://github.com/">GitHub</a><br>
+			<a href="https://bitbucket.com/">BitBucket</a><br>
+			<a href="https://globoesporte.globo.com/">Globo Esporte</a><br>
+		</div>
+	</div>
+	<script>
+		function getWelcome() {
+			var date = new Date();
+			var hour = date.getHours();
+			if (hour > 4 && hour < 13) {
+				document.getElementById("welcome").innerHTML = "Bom dia!";
+			} else if (hour > 12 && hour < 19) {
+				document.getElementById("welcome").innerHTML = "Boa tarde!";
+			} else {
+				document.getElementById("welcome").innerHTML = "Boa noite!";
+			}
+		}
+		function getQuote() {
+			var quotes = ["These are hard times for dreamers.", "Constantly talking isn't necessarily communicating.",
+						"Adults are, like, this mess of sadness and phobias.", "Meet me... in Montauk...", 
+						"The past is just a story we tell ourselves.", "We are only here briefly, and in this moment I want to allow myself joy.",
+						"Não há ventos favoráveis para aqueles que não sabem onde querem chegar.",
+						"The fool looks at a finger that points at the sky.",
+						"I am nobody's little weasel.",
+						"Suicide is a permanent solution to a temporary problem."];
+			var x = Math.floor(Math.random()*10);
+			document.getElementById("quote").innerHTML = quotes[x];
+		}
+	</script>
+</body>
+</html>

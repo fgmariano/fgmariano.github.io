@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 dataForm">
+                <h1>Download time</h1>
+                <label for="size">File size</label>
+                <div class="form-group form-inline">
+                    <input class="form-control" type="text" id="size" >
+                    <select class="form-control" id="sizeOpt">
+                        <option value="mb">MB</option>
+                        <option value="kb">KB</option>
+                        <option value="gb">GB</option>
+                    </select>
+                </div>
+                <label for="speed">Connection speed</label>
+                <div class="form-group form-inline">
+                    <input class="form-control" type="text" name="speed" id="speed" >
+                    <select class="form-control" id="speedOpt">
+                        <option value="kb">KB/s</option>
+                        <option value="mb">MB/s</option>
+                        <option value="gb">GB/s</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time">Estimated time of download</label>
+                    <input class="form-control" type="text" id="result" readonly>
+                </div>
+                <button class="btn btn-primary btn-lg" type="submit" onclick="calc()">Submit</button>
+                <button class="btn btn-default btn-lg" type="submit" onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; Fabio Mariano 2017</p>
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

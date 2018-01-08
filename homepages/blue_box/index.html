@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>My Homepage</title>
+	<meta charset="utf-8">
+	<style>
+	body {
+		background-color: #2A2D36;
+	}
+	.box {
+		height: 450px;
+		width: 430px;
+		border: 3px solid #00B2D3;
+		background-color: #2F333E;
+		position: absolute;
+		top: 0;
+		bottom:0;
+		left:0;
+		right:0;
+		margin: auto;
+	}
+	.greet {
+		font-family: "Ubuntu";
+		font-size: 50px;
+		color: #00B2D3;
+		margin-top: 20px;
+		margin-left: 100px;
+	}
+	.greetings {
+		font-family: "Ubuntu";
+		font-size: 50px;
+		color: #00B2D3;
+		text-align: center;
+	}
+	.content {
+		font-family: "Ubuntu";
+		font-size: 20px;
+		color: #00B2D3;
+		margin-left: 20px;
+		margin-right: 20px;
+		line-height: 1.8;
+	}
+	.content p {
+		display: inline;
+	}
+	.content a {
+		font-family: "Ubuntu";
+		font-size: 20px;
+		color: #FF934B;
+		text-decoration: none;
+		display: inline;
+	}
+	</style>
+	<script>
+		function getGreetings() {
+			var date = new Date();
+			var hour = date.getHours();
+			if (hour > 4 && hour < 13) {
+				document.getElementById("greets").innerHTML = "Bom dia!";
+			} else if (hour > 12 && hour < 19) {
+				document.getElementById("greets").innerHTML = "Boa tarde!";
+			} else {
+				document.getElementById("greets").innerHTML = "Boa noite!";
+			}
+		}		
+	</script>
+</head>
+<body onload="getGreetings();">
+	<div class="box">
+		<div class="greetings">
+			<p id="greets"></p>
+		</div>
+		<div class="content">
+			<p>SOCIAL [ </p><a href="https://facebook.com">Facebook</a> / <a href="https://google.com">Google</a> / <a href="https://twitter.com">Twitter</a> ]<br/>
+			<p>EMAIL [ </p><a href="https://outlook.com">Outlook</a> / <a href="https://mail.google.com">Gmail</a> / <a href="https://mail.yahoo.com">Yahoo! Mail</a> ]<br/>
+			<p>ENTERTAINMENT [ </p><a href="https://youtube.com">YouTube</a> / <a href="https://twitch.tv/catalog">Twitch</a> ]<br/>
+			<p>WORK [ </p><a href="https://github.com">GitHub</a> / <a href="https://bitbucket.com">BitBucket</a> ]<br/>
+			<p>MISC [ </p><a href="https://distrowatch.com">Distrowatch</a> / <a href="https://itsfoss.com">It's FOSS</a> / <a href="https://translate.google.com">Translate</a> / <a href="https://evernote.com">Evernote</a> / <a href="https://getpocket.com">Pocket</a> ]<br/>
+		</div>
+	</div>
+</body>
+</html>
