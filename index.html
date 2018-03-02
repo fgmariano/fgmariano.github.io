@@ -5,11 +5,12 @@
     <title>Fabio Mariano's Website</title>
     <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Rajdhani|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,700|Open+Sans+Condensed:300,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-    <div class="nav">
+    <div class="nav-bar">
         <p><a href="index.html"><i class="fa fa-terminal"></i> FABIO<span>MARIANO</span></a></p>
         <ul>
         <li><a href="#home">Home</a></li>
@@ -27,45 +28,84 @@
     <section id="projects">
     <div class="section-a">
         <h1 class="section-title">My projects</h1>
-        <div class="content-a">
-            <img src="img/homepage.png" alt="Homepage screenshot">
-            <ul>
-                <li><h3>Basic homepage</h3></li>
-                <li><p>Basic homepage based on WhatColourIsIt and a few inspirational quotes.</p></li>
-                <li><a href="homepage/index.html" target="_blank">Check it out!</a></li>
-            </ul>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="img/homepage.png" alt="Homepage screenshot">
+                    <div class="card-body">
+                        <p class="card-text">Basic homepage based on WhatColourIsIt and a few inspirational quotes.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="homepage/index.html" class="btn btn-sm btn-outline-secondary">View</a>
+                                <a href="https://github.com/fgmariano/fgmariano.github.io/tree/master/homepage" class="btn btn-sm btn-outline-secondary">Source code</a>
+                            </div>
+                            <small class="text-muted">JS</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="img/download.png" alt="Homepage screenshot">
+                    <div class="card-body">
+                        <p class="card-text">ETA calculador made with Java-Server Faces and primefaces.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                                <a href="https://github.com/fgmariano/download-eta" class="btn btn-sm btn-outline-secondary">Source code</a>
+                            </div>
+                            <small class="text-muted">Java</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="img/hltvparser2.png" alt="Homepage screenshot">
+                    <div class="card-body">
+                        <p class="card-text">Android app based on hltv.org to follow csgo events and matches.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                                <a href="https://github.com/fgmariano/hltvparser" class="btn btn-sm btn-outline-secondary">Source code</a>
+                            </div>
+                            <small class="text-muted">Java</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="content-b">
-            <img src="img/download.png" alt="Download Calculator screenshot">
-            <ul>
-                <li><h3>Download calculator</h3></li>
-                <li><p>Made with Bootstrap, Primefaces and JSF. Hosted on Red Hat Openshift.</p></li>
-                <li><a href="https://calculadora-fmariano.rhcloud.com/index.xhtml" target="_blank">Check it out!</a></li>
-            </ul>
-        </div>
-        <div class="content-a">
-            <img src="img/calc.png" alt="JS Download Calculator screenshot">
-            <ul>
-                <li><h3>JS Download calculator</h3></li>
-                <li><p>Javascript version, hosted here.</p></li>
-                <li><a href="calculadora/index.html" target="_blank">Check it out!</a></li>
-            </ul>
-        </div>
-        <div class="content-b">
-            <img src="img/hltvparser2.png" alt="HLTVParser app screenshot">
-            <ul>
-                <li><h3>HLTV Parser</h3></li>
-                <li><p>Get results of professional CS:GO matches.</p></li>
-                <li><a href="https://github.com/sintaxe/hltvparser" target="_blank">Check it out!</a></li>
-            </ul>
-        </div>
-        <div class="content-a">
-            <img src="img/lipsum.png" alt="@ipsumthoughts twitter screenshot">
-            <ul>
-                <li><h3>Ipsum thoughts</h3></li>
-                <li><p>The perfect lipsum generator for all of your text boxes up to 140 characters.</p></li>
-                <li><a href="https://twitter.com/ipsumthoughts" target="_blank">Check it out!</a></li>
-            </ul>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="img/lipsum.png" alt="Homepage screenshot">
+                    <div class="card-body">
+                        <p class="card-text">Python script for generating and tweeting lorem ipsum quotes, daily.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="https://twitter.com/ipsumthoughts" class="btn btn-sm btn-outline-secondary">View</a>
+                                <a href="https://github.com/fgmariano/ipsumthoughts" class="btn btn-sm btn-outline-secondary">Source code</a>
+                            </div>
+                            <small class="text-muted">Python</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="img/calc.png" alt="Homepage screenshot">
+                    <div class="card-body">
+                        <p class="card-text">Small ETA calculador written on javascript.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="calculadora/index.html" class="btn btn-sm btn-outline-secondary">View</a>
+                                <a href="https://github.com/fgmariano/fgmariano.github.io/tree/master/calculadora" class="btn btn-sm btn-outline-secondary">Source code</a>
+                            </div>
+                            <small class="text-muted">JS</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     </section>
@@ -75,8 +115,9 @@
         <h1 class="section-title white">About me</h1>
         <div style="display=inline;">
             <img class="img-about" src="https://avatars0.githubusercontent.com/u/30389984" alt="Me" />
-            <p>Open-source enthusiast. I code for fun, always trying to simplify my routine by automating something, from a script to fix my music library to a scraper to help me choose a movie to watch.</p>
-            <p>By now, I code on JAVA (both desktop and web) and I'm learning PHP, Python and javascript, you can check some of my project on those languages on my GitHub or on this magnificent website.</p>
+            <p>I've started my path on IT with a System's analysis and development course in 2014. My main language at the college was java and JSF for the web development part of the course, my college was also important to build my skills in SQL, both MySQL and SQL Server relational databases, and linux system administration.</p>
+        	<p>However, I've always looked up new technologies by my own, I'm a self-taught python programmer with a few experiences in web development with both flask and django frameworks, a few small projects with javascript and PHP that was good for getting the basics of both languages and linux in general, thanks to my deeply passion about the free software philosophy and the open-source movement.</p>
+            <p>Right now I'm primarily working on my final paper about microservices architecture, but I have a side project involving game-tracking (something around what letterboxd is for movies) in spring framework mainly for training my web development skills.</p>
         </div>
     </div>
     </section>

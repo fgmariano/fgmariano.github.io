@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     background-color: #F8F8F8;
 }
-.nav {
+.nav-bar {
     background-color: rgba(255,255,255,0);
     margin: 0;
     position: fixed;
@@ -11,11 +11,11 @@ html, body {
     height: 60px;
     z-index: 2;
 }
-.nav.scrolled {
+.nav-bar.scrolled {
   background-color: #000 !important;
   transition: background-color 200ms linear;
 }
-.nav p {
+.nav-bar p {
     color: #FFF;
     font: 30px 'Open Sans Condensed', sans-serif;
     display: inline-block;
@@ -23,28 +23,29 @@ html, body {
     padding-left: 100px;
     margin-top: 7px;
 }
-.nav p a {
+.nav-bar p a {
     text-decoration: none;
     color: #FFF;
 }
-.nav p span {
+.nav-bar p span {
   font-weight: bold;
 }
-.nav ul {
+.nav-bar ul {
+    margin-top: 10px;
     list-style: none;
     text-align: right;
     float: right;
 }
-.nav ul li {
+.nav-bar ul li {
     display: inline-block;
     padding-right: 50px;
 }
-.nav ul li a {
-    font: 20px 'Rajdhani', sans-serif;
+.nav-bar ul li a {
+    font: 24px 'Open Sans Condensed', sans-serif;
     text-decoration: none;
     color: #FFF;
 }
-.nav ul li a:hover {
+.nav-bar ul li a:hover {
     color: #C1C1C1;
 }
 .header {
@@ -68,83 +69,40 @@ html, body {
           align-items: center;
   text-align: center;
 }
+.header {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
 .header h1 {
     color: #FFF;
-    font: 900 96px 'Rajdhani', sans-serif;
+    font-size: 96px;
+    font-weight: normal;
     text-shadow: 0px 2px 4px rgba(0, 0, 0.6);
-    margin-bottom: -50px;
 }
 .header h4 {
     color: #FFF;
-    font: 900 40px 'Rajdhani', cursive;
+    font-weight: normal;
+    font-size: 40px;
 }
 .section-title {
-    color: #000000;
-    font: 900 72px 'Rajdhani', sans-serif;
+    color: #000;
+    font: 700 72px 'Rajdhani', sans-serif;
+    text-align: center;
+    margin: 20px;
 }
 .white {
     color: #FFF;
 }
 .section-a {
-    font-family: 'Roboto', sans-serif;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
+    padding: 30px;
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+    /*font-family: 'Roboto', sans-serif;*/
 }
 .section-a img {
-    border-radius: 10px;
-    width: 500px;
-    height: 300px;
-}
-.section-a p {
-    font-size: 20px;
-}
-.section-a h3 {
-    color: #000;
-    font-size: 35px;
-}
-.section-a a {
-    font-size: 20px;
-    color: #000;
-    text-decoration: none;
-}
-.section-a a:hover {
-    text-decoration: underline;
-}
-.content-a {
-    background-color: #f8f8f8;
-}
-.content-b {
-    background-color: #FFF;
-    padding: 50px;
-}
-.content-a img {
-    float: left;
-}
-.content-b img {
-    float: right;
-}
-.content-a ul {
-    list-style-type: none;
-    float: left;
-    text-align: left;
-}
-.content-b ul {
-    list-style-type: none;
-    float: right;
-    text-align: right;
-    padding-right: 40px;
-}
-.content-a {
-    padding: 50px;
+    width: 410px;
+    height: 200px;
 }
 .section-b {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     background-image: url(../img/altbg1.jpeg);
     background-size: cover;
     background-position: center;
@@ -189,7 +147,7 @@ html, body {
     padding-left: 50px;
 }
 .section-c {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -213,8 +171,12 @@ html, body {
 .section-c a:hover {
     text-decoration: underline;
 }
+.card {
+    box-shadow: 0 0 1px black;
+}
 footer {
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Open Sans Condensed', sans-serif;
     background-color: black;
     width: 100%;
     height: 100px;
@@ -230,4 +192,5 @@ footer {
 footer p {
     font-size: 20px;
     color: white;
+    margin-top: 30px;
 }

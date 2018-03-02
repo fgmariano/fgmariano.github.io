@@ -1,8 +1,8 @@
-$('.nav').localScroll();
+$('.nav-bar').localScroll();
 
 $(function () {
   $(document).scroll(function () {
-	  var $nav = $(".nav");
+	  var $nav = $(".nav-bar");
 	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
 	});
 });
